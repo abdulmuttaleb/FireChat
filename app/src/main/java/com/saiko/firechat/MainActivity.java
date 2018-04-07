@@ -52,20 +52,20 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(com.google.firebase.udacity.firechat.R.layout.activity_main);
+        setContentView(com.saiko.firechat.R.layout.activity_main);
 
         mUsername = ANONYMOUS;
 
         // Initialize references to views
-        mProgressBar = (ProgressBar) findViewById(com.google.firebase.udacity.firechat.R.id.progressBar);
-        mMessageListView = (ListView) findViewById(com.google.firebase.udacity.firechat.R.id.messageListView);
-        mPhotoPickerButton = (ImageButton) findViewById(com.google.firebase.udacity.firechat.R.id.photoPickerButton);
-        mMessageEditText = (EditText) findViewById(com.google.firebase.udacity.firechat.R.id.messageEditText);
-        mSendButton = (Button) findViewById(com.google.firebase.udacity.firechat.R.id.sendButton);
+        mProgressBar = (ProgressBar) findViewById(com.saiko.firechat.R.id.progressBar);
+        mMessageListView = (ListView) findViewById(com.saiko.firechat.R.id.messageListView);
+        mPhotoPickerButton = (ImageButton) findViewById(com.saiko.firechat.R.id.photoPickerButton);
+        mMessageEditText = (EditText) findViewById(com.saiko.firechat.R.id.messageEditText);
+        mSendButton = (Button) findViewById(com.saiko.firechat.R.id.sendButton);
 
         // Initialize message ListView and its adapter
         List<FriendlyMessage> friendlyMessages = new ArrayList<>();
-        mMessageAdapter = new MessageAdapter(this, com.google.firebase.udacity.firechat.R.layout.item_message, friendlyMessages);
+        mMessageAdapter = new MessageAdapter(this, com.saiko.firechat.R.layout.item_message, friendlyMessages);
         mMessageListView.setAdapter(mMessageAdapter);
 
         // Initialize progress bar
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(com.google.firebase.udacity.firechat.R.menu.main_menu, menu);
+        inflater.inflate(com.saiko.firechat.R.menu.main_menu, menu);
         return true;
     }
 
