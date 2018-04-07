@@ -1,4 +1,4 @@
-package com.google.firebase.udacity.friendlychat;
+package com.saiko.firechat;
 
 import android.app.Activity;
 import android.content.Context;
@@ -20,12 +20,12 @@ public class MessageAdapter extends ArrayAdapter<FriendlyMessage> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = ((Activity) getContext()).getLayoutInflater().inflate(R.layout.item_message, parent, false);
+            convertView = ((Activity) getContext()).getLayoutInflater().inflate(com.google.firebase.udacity.firechat.R.layout.item_message, parent, false);
         }
 
-        ImageView photoImageView = (ImageView) convertView.findViewById(R.id.photoImageView);
-        TextView messageTextView = (TextView) convertView.findViewById(R.id.messageTextView);
-        TextView authorTextView = (TextView) convertView.findViewById(R.id.nameTextView);
+        ImageView photoImageView = (ImageView) convertView.findViewById(com.google.firebase.udacity.firechat.R.id.photoImageView);
+        TextView messageTextView = (TextView) convertView.findViewById(com.google.firebase.udacity.firechat.R.id.messageTextView);
+        TextView authorTextView = (TextView) convertView.findViewById(com.google.firebase.udacity.firechat.R.id.nameTextView);
 
         FriendlyMessage message = getItem(position);
 

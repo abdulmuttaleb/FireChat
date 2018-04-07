@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.firebase.udacity.friendlychat;
+package com.saiko.firechat;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -52,20 +52,20 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(com.google.firebase.udacity.firechat.R.layout.activity_main);
 
         mUsername = ANONYMOUS;
 
         // Initialize references to views
-        mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
-        mMessageListView = (ListView) findViewById(R.id.messageListView);
-        mPhotoPickerButton = (ImageButton) findViewById(R.id.photoPickerButton);
-        mMessageEditText = (EditText) findViewById(R.id.messageEditText);
-        mSendButton = (Button) findViewById(R.id.sendButton);
+        mProgressBar = (ProgressBar) findViewById(com.google.firebase.udacity.firechat.R.id.progressBar);
+        mMessageListView = (ListView) findViewById(com.google.firebase.udacity.firechat.R.id.messageListView);
+        mPhotoPickerButton = (ImageButton) findViewById(com.google.firebase.udacity.firechat.R.id.photoPickerButton);
+        mMessageEditText = (EditText) findViewById(com.google.firebase.udacity.firechat.R.id.messageEditText);
+        mSendButton = (Button) findViewById(com.google.firebase.udacity.firechat.R.id.sendButton);
 
         // Initialize message ListView and its adapter
         List<FriendlyMessage> friendlyMessages = new ArrayList<>();
-        mMessageAdapter = new MessageAdapter(this, R.layout.item_message, friendlyMessages);
+        mMessageAdapter = new MessageAdapter(this, com.google.firebase.udacity.firechat.R.layout.item_message, friendlyMessages);
         mMessageListView.setAdapter(mMessageAdapter);
 
         // Initialize progress bar
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main_menu, menu);
+        inflater.inflate(com.google.firebase.udacity.firechat.R.menu.main_menu, menu);
         return true;
     }
 
